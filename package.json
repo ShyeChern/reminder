@@ -1,0 +1,55 @@
+{
+	"name": "reminder",
+	"version": "1.0.0",
+	"description": "A reminder app",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --watch . --exec \"npx electron .\" -e html,css,js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder",
+		"publish": "electron-builder build --win -p always"
+	},
+	"author": "Shye Chern",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^17.1.2",
+		"electron-builder": "^22.14.13",
+		"nodemon": "^2.0.15"
+	},
+	"dependencies": {
+		"electron-updater": "^4.6.5",
+		"node-schedule": "^2.1.0"
+	},
+	"build": {
+		"appId": "com.electron.reminder",
+		"productName": "reminder",
+		"copyright": "Copyright Shye Chern",
+		"mac": {
+			"category": "public.app-category.utilities"
+		},
+		"win": {
+			"certificateFile": "build/shyechern.example.pfx",
+			"certificatePassword": "",
+			"publisherName": "Shye Chern",
+			"verifyUpdateCodeSignature": false
+		},
+		"nsis": {
+			"oneClick": false,
+			"allowToChangeInstallationDirectory": true
+		},
+		"publish": [
+			{
+				"provider": "github",
+				"owner": "ShyeChern",
+				"repo": "reminder"
+			}
+		],
+		"extraResources": [
+			{
+				"from": "./src/assets/img/icon.png",
+				"to": "./assets/img/icon.png"
+			}
+		]
+	}
+}

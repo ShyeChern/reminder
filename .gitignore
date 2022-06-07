@@ -1,0 +1,9 @@
+# Node build artifacts
+node_modules
+
+# build artifacts
+dist/
+build/gh_token.txt
+
+# Initial data
+data.json

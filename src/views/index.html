@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' data:;">
+  <meta http-equiv="X-Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; font-src 'self' data:;">
+  <!-- rrule lib -->
+  <script src='../assets/rrule.min.js'></script>
+  <!-- fullcalendar bundle -->
+  <script src='../assets/fullcalendar/lib/main.js'></script>
+  <!-- the rrule-to-fullcalendar connector. must go AFTER the rrule lib -->
+  <script src='../assets/main.global.min.js'></script>
+  <link rel='stylesheet' type="text/css" href='../assets/fullcalendar/lib/main.css' />
+  <link rel="stylesheet" type="text/css" href="../assets/photon/css/photon.css">
+  <link rel="stylesheet" type="text/css" href="../assets/photon/css/photon.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <script src="../assets/jquery-3.6.0.min.js"></script>
+  <title>Reminder</title>
+
+</head>
+
+<body>
+  <div class="window">
+    <div class="tab-group">
+      <div class="tab-item active">
+        Calendar
+      </div>
+      <div class="tab-item">
+        Coming Soon...
+      </div>
+    </div>
+    <div class="window-content">
+      <div class="pane-group">
+        <div id="calendar" class="pane">Loading...</div>
+        <div id="sidebar" class="pane-sm">Loading...</div>
+      </div>
+    </div>
+  </div>
+  <div id="event-modal-div"></div>
+</body>
+
+<script src="../js/index.js"></script>
+
+</html>
