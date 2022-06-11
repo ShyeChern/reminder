@@ -66,7 +66,8 @@ function scheduleJob() {
 	const createNoti = (title, body) => {
 		new Notification({ title, body, timeoutType: 'never' }).show();
 	};
-	const job = schedule.scheduleJob('* * * * * *', () => {
+	// Run every hour
+	const job = schedule.scheduleJob('0 * * * *', () => {
 		let file = JSON.parse(fs.readFileSync(constants.FILE_PATH));
 		const events = [
 			...file.oneTime,

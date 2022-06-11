@@ -7,7 +7,7 @@ A desktop reminder application. Developed by using Electron.
 [Changelog](CHANGELOG.md)
 
 ## Demo
-<img src="https://github.com/ShyeChern/reminder/raw/master/src/assets/gif/demo.gif" alt="Demo" width="500" height="300"> 
+<img src="https://github.com/ShyeChern/reminder/raw/master/src/assets/gif/demo.gif" alt="Demo" width="400" height="300"> 
 
 ## Installation
 1. Download the setup from the link below.
